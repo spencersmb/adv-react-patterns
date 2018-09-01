@@ -1,18 +1,18 @@
 import React from 'react'
-import {renderToggle} from '../../test/utils'
-import Usage from '../exercises-final/01'
-// import Usage from '../exercises/01'
+import { renderToggle } from '../../test/utils'
+// import Usage from '../exercises-final/01'
+import Usage from '../exercises/01'
 
 test('renders a toggle component', () => {
-  const handleToggle = jest.fn()
-  const {toggleButton, toggle} = renderToggle(
-    <Usage onToggle={handleToggle} />,
-  )
-  expect(toggleButton).toBeOff()
-  toggle()
-  expect(toggleButton).toBeOn()
-  expect(handleToggle).toHaveBeenCalledTimes(1)
-  expect(handleToggle).toHaveBeenCalledWith(true)
+	const handleToggle = jest.fn()
+	const {toggleButton, toggle} = renderToggle(
+		<Usage onToggle={handleToggle}/>,
+	)
+	expect(toggleButton).toBeOff()
+	toggle()
+	expect(toggleButton).toBeOn()
+	expect(handleToggle).toHaveBeenCalledTimes(1)
+	expect(handleToggle).toHaveBeenCalledWith(true)
 })
 
 //////// Elaboration & Feedback /////////
@@ -24,8 +24,8 @@ test('renders a toggle component', () => {
 /*
 http://ws.kcd.im/?ws=react%20patterns&e=01&em=spencer.bigum@gmail.com
 */
-test.skip('I submitted my elaboration and feedback', () => {
-  const submitted = false // change this when you've submitted!
-  expect(submitted).toBe(true)
+test('I submitted my elaboration and feedback', () => {
+	const submitted = true // change this when you've submitted!
+	expect(submitted).toBe(true)
 })
 ////////////////////////////////
